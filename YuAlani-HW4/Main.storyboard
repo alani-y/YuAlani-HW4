@@ -29,7 +29,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select Pip"/>
                                 <connections>
-                                    <segue destination="ovF-g5-lwl" kind="show" id="MV2-Ym-Bg1"/>
+                                    <segue destination="ovF-g5-lwl" kind="show" identifier="PipSegue" id="MV2-Ym-Bg1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pip Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kp0-DQ-mx8">
@@ -70,6 +70,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DcW-9p-t3B"/>
+                    <connections>
+                        <outlet property="pipText" destination="Ff7-El-ziz" id="idn-0Z-aOS"/>
+                        <outlet property="suitText" destination="zSh-dm-NT6" id="Lh5-FZ-cBP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

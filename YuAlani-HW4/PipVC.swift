@@ -9,6 +9,8 @@ import UIKit
 
 public let pipValues = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 
+var userPip:String = "Select Pip"
+
 class PipVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
@@ -36,6 +38,8 @@ class PipVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        userPip = pipValues[indexPath.row]
         print(pipValues[indexPath.row])
     }
     

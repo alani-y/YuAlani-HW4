@@ -8,6 +8,7 @@
 import UIKit
 
 public let suits = ["Clubs", "Spades", "Aces", "Hearts"]
+var userSuit:String = "Select Suit"
 
 class SuitVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -37,6 +38,8 @@ class SuitVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         suitTableView.deselectRow(at: indexPath, animated: true)
+        
+        userSuit = suits[indexPath.row]
         print(suits[indexPath.row])
     }
 

@@ -43,23 +43,5 @@ class PipVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         print(pipValues[indexPath.row])
         navigationController?.popViewController(animated: true)
     }
-    
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == PipSegue,
-           let destination = segue.destination as? PipVC,
-           let teamIndex = tableView.indexPathForSelectedRow?.row {
-            destination.teamName = pipValues[teamIndex]
-        }
-    }*/
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

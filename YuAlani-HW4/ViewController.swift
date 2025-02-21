@@ -12,6 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var pipText: UIButton!
     @IBOutlet weak var suitText: UIButton!
 
+    @IBOutlet weak var pipStatus: UILabel!
+    @IBOutlet weak var suitStatus: UILabel!
+    @IBOutlet weak var guessStatus: UILabel!
+    
+    var guessNum = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +27,11 @@ class ViewController: UIViewController {
         
         print(correctPip)
         print(correctSuit)
+        
+        // makes all the
+        pipStatus.alpha = 0
+        suitStatus.alpha = 0
+        guessStatus.alpha = 0
     }
 
     
@@ -29,6 +40,20 @@ class ViewController: UIViewController {
        // print("viewWillAppear")
         pipText.setTitle(userPip, for: .normal)
         suitText.setTitle(userSuit, for: .normal)
+    }
+    
+    // checks if the user guessed the pip and suit
+    @IBAction func submitButton(_ sender: Any) {
+        
+        if((userPip != "Select Pip") && (userSuit != "Select Suit"))
+        {
+            guessNum += 1
+        }
+        else
+        {
+            
+        }
+        
     }
 }
 

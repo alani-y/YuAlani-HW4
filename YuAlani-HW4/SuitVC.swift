@@ -41,6 +41,7 @@ class SuitVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         userSuit = suits[indexPath.row]
         print(suits[indexPath.row])
+        navigationController?.popViewController(animated: true)
     }
 
 }

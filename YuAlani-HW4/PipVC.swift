@@ -41,6 +41,7 @@ class PipVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         userPip = pipValues[indexPath.row]
         print(pipValues[indexPath.row])
+        navigationController?.popViewController(animated: true)
     }
     
     /*
